@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
 def hello_view(request):
-    return render (request,'hello.html')
+    return render (request,'index.html')
 
-def hello_view(request):
+def index(request):
     menu_items = [
         {"name": "Home", "url": "index", "active": True},
         {"name": "About", "url": "about", "active": False},
         {"name": "Classes", "url": "classes", "active": False},
         {"name": "Blog", "url": "blog", "active": False},
     ]
-    return render(request, 'hello.html', {'menu_items': menu_items})
+    return render(request, 'index.html', {'menu_items': menu_items})
